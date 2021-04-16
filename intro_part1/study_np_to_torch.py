@@ -10,5 +10,5 @@ print(b)
 print(b.numpy())
 
 
-print(b.mul(2))
-print(a)
+b.mul_(2)
+print(a,"\n",b)
