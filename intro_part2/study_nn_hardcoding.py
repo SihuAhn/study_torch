@@ -25,7 +25,11 @@ def calc_output(features, W1, W2, B1, B2):
     return output
 
 def softmax(x):
+    # print(torch.sum(torch.exp(x), dim=1))
+    # print(torch.sum(torch.exp(x), dim=1).reshape(-1,2))
+    # print(torch.sum(torch.exp(x), dim=1).view(-1, 1))
+    # print(torch.sum(torch.exp(x), dim=1).view(1, -1))
     return torch.exp(x) / torch.sum(torch.exp(x), dim=1).view(-1, 1)
 
-
-
+# torch.manual_seed(7)
+# print(softmax(torch.randn([4,2])))

@@ -30,6 +30,7 @@ img_idx = 0
 ps = model.forward(images[img_idx, :])
 
 img = images[img_idx]
-plt.imshow(images[1].numpy().squeeze())
+print(img)
+plt.imshow(images[1].view(28,28).numpy().squeeze(), cmap='Greys_r')
 plt.show()
 print(ps.shape)
