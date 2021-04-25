@@ -9,7 +9,7 @@ model = nn.Sequential(nn.Linear(784, 128),
                       nn.LogSoftmax(dim=1))
 
 criterion = nn.NLLLoss()
-optimizer = optim.SGD(model.parameters(), lr=0.003)
+optimizer = optim.Adam(model.parameters(), lr=0.003)
 
 
 epoch = 5
@@ -28,3 +28,5 @@ for e in range(epoch):
 
     else:
         print(f"Training loss: {running_loss/len(trainloader)}")
+
+print()
