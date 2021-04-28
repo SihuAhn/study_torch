@@ -2,6 +2,8 @@ from model import *
 from data_load import *
 
 my_model = Classifier()
+my_model.load_state_dict(torch.load('checkpoint.pth'))
+print(my_model)
 
 images, labels = next(iter(testloader))
 ps = torch.exp(my_model(images))

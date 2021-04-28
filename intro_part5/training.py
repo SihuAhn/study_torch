@@ -5,7 +5,7 @@ model = Classifier()
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.0003)
 
-epochs = 30
+epochs = 5
 steps = 0
 
 train_losses, test_losses = [], []
@@ -28,3 +28,5 @@ for e in range(epochs):
 
         accuracy = torch.mean(equals.type(torch.FloatTensor))
         print(f'Accuracy: {accuracy.item()*100}%')
+
+torch.save(model.state_dict(), 'checkpoint.pth')
