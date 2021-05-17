@@ -21,9 +21,9 @@ transform = transforms.Compose([
     ])
 
 # choose the training and test datasets
-train_data = datasets.CIFAR10('data', train=True,
+train_data = datasets.CIFAR10('../data', train=True,
                               download=True, transform=transform)
-test_data = datasets.CIFAR10('data', train=False,
+test_data = datasets.CIFAR10('../data', train=False,
                              download=True, transform=transform)
 
 # obtain training indices that will be used for validation
