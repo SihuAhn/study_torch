@@ -7,14 +7,14 @@ import numpy as np
 # number of subprocesses to use for data loading
 num_workers = 0
 # how many samples per batch to load
-batch_size = 20
+batch_size = 10
 # percentage of training set to use as validation
 valid_size = 0.2
 
 # convert data to a normalized torch.FloatTensor
 transform = transforms.Compose([
     transforms.RandomHorizontalFlip(), # randomly flip and rotate
-    transforms.RandomResizedCrop(227),
+    transforms.RandomResizedCrop(224),
     transforms.RandomRotation(10),
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
