@@ -1,4 +1,4 @@
-from cnn_model import *
+from vgg16 import *
 from data_loader import *
 
 import numpy as np

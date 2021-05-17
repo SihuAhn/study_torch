@@ -1,5 +1,5 @@
 from data_loader import *
-from cnn_model import *
+from vgg16 import *
 
 import torch.optim as optim
 
